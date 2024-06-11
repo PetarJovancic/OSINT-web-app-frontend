@@ -19,33 +19,38 @@ The app requires an .env file. You can copy content from .env.example.
 
 ### Requirements
 
-NodeJS installed on your system (v20.11.1 or higher) -\*\* [NodeJS](https://nodejs.org)
+NodeJS installed on your system (v20.14.0 or higher) -\*\* [NodeJS](https://nodejs.org)
 
 ### Usage (without Docker)
 
 Install node_modules:
 
 ```
-
 npm install
-
 ```
 
 To execute app, run:
 
 ```
-
 npm start
-
 ```
 
 ### Using Docker
 
-To build and run Docker container use the following command:
+### Using Docker
+
+To build Docker container use the following command:
 
 ```
 
-docker-compose down                                     
-docker-compose up --build
+docker build -t osint-web-app-frontend .
+
+```
+
+To run Docker container use the following command:
+
+```
+
+docker run -p 3000:3000 osint-web-app-frontend
 
 ```
