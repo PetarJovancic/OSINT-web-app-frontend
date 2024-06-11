@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import './ScanForm.css';
-import { ClipLoader } from 'react-spinners';
+import React, { useState } from "react";
+import "./ScanForm.css";
+import { ClipLoader } from "react-spinners";
 
 function ScanForm({ onScan, loading }) {
-  const [website, setDomain] = useState('');
-  const [scan_type, setTool] = useState('THE_HARVESTER');
+  const [website, setDomain] = useState("");
+  const [scan_type, setTool] = useState("THE_HARVESTER");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -25,13 +25,21 @@ function ScanForm({ onScan, loading }) {
       </div>
       <div className="form-group">
         <label htmlFor="scan_type">Tool:</label>
-        <select id="scan_type" value={scan_type} onChange={(e) => setTool(e.target.value)}>
+        <select
+          id="scan_type"
+          value={scan_type}
+          onChange={(e) => setTool(e.target.value)}
+        >
           <option value="THE_HARVESTER">theHarvester</option>
           <option value="AMASS">Amass</option>
         </select>
       </div>
       <button type="submit" disabled={loading}>
-        {loading ? <ClipLoader size={20} color={"#fff"} loading={true} /> : 'Start Scan'}
+        {loading ? (
+          <ClipLoader size={20} color={"#fff"} loading={true} />
+        ) : (
+          "Start Scan"
+        )}
       </button>
     </form>
   );

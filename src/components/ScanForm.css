@@ -13,7 +13,8 @@ label {
   margin-bottom: 5px;
 }
 
-input, select {
+input,
+select {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -21,11 +22,11 @@ input, select {
   border-radius: 5px;
   background-color: #333;
   color: #fff;
-  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  box-sizing: border-box;
 }
 
 button {
-  background-color: #6a0dad; /* Purple color */
+  background-color: #6a0dad;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -39,5 +40,5 @@ button:disabled {
 }
 
 button:hover:enabled {
-  background-color: #5a00b8; /* Darker purple for hover */
+  background-color: #5a00b8;
 }

@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import Modal from 'react-modal';
-import ScanForm from './components/ScanForm';
-import ScanResults from './components/ScanResults';
-import {fetchScanIds, fetchScanById, initiateScan} from './api/API'
-import './App.css';
-import logo from './assets/logo.png';
-import { Image } from 'react-bootstrap';
-import { ClipLoader } from 'react-spinners';
+import React, { useState, useEffect } from "react";
+import Modal from "react-modal";
+import ScanForm from "./components/ScanForm";
+import ScanResults from "./components/ScanResults";
+import { fetchScanIds, fetchScanById, initiateScan } from "./api/API";
+import "./App.css";
+import logo from "./assets/logo.png";
+import { Image } from "react-bootstrap";
+import { ClipLoader } from "react-spinners";
 
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 function App() {
   const [scanResults, setScanResults] = useState([]);
@@ -20,10 +20,12 @@ function App() {
     setFetchingResults(true);
     try {
       const ids = await fetchScanIds();
-      const results = await Promise.all(ids.map((data) => fetchScanById(data.id)));
+      const results = await Promise.all(
+        ids.map((data) => fetchScanById(data.id))
+      );
       setScanResults(results);
     } catch (error) {
-      console.error('Error fetching scan results:', error);
+      console.error("Error fetching scan results:", error);
     } finally {
       setFetchingResults(false);
     }
@@ -40,7 +42,7 @@ function App() {
       setScanResults((prevResults) => [newScanResult, ...prevResults]);
       closeModal();
     } catch (error) {
-      console.error('Error initiating scan:', error);
+      console.error("Error initiating scan:", error);
     } finally {
       setLoading(false);
     }
@@ -59,7 +61,10 @@ function App() {
       <div className="card main-card">
         <Image src={logo} fluid rounded className="logo" />
         <h2 className="left-align">OSINT Domain Scanner</h2>
-        <p className="main-title">Efficiently scan domains using the OSINT tools Amass and theHarvester, providing crucial information for cybersecurity and research purposes.</p>
+        <p className="main-title">
+          Efficiently scan domains using the OSINT tools Amass and theHarvester,
+          providing crucial information for cybersecurity and research purposes.
+        </p>
         <button onClick={openModal}>Scan a website</button>
       </div>
       {fetchingResults ? (
@@ -76,7 +81,9 @@ function App() {
         className="modal"
         overlayClassName="overlay"
       >
-        <button onClick={closeModal} className="close-button">X</button>
+        <button onClick={closeModal} className="close-button">
+          X
+        </button>
         <h3>New Scan</h3>
         <div className="form-card">
           <ScanForm onScan={handleScan} loading={loading} />

@@ -11,20 +11,17 @@
 
 ### Introduction
 
+This is a frontend app for osint web app.
 
 ## Usage
 
-The app requires an `.env` file with the following variables:
-
-```
-REACT_APP_BACKEND_URL=<react-app-backend-url>
-```
+The app requires an .env file. You can copy content from .env.example.
 
 ### Requirements
 
 NodeJS installed on your system (v20.11.1 or higher) -\*\* [NodeJS](https://nodejs.org)
 
-### Usage
+### Usage (without Docker)
 
 Install node_modules:
 
@@ -44,17 +41,11 @@ npm start
 
 ### Using Docker
 
-To build Docker container use the following command:
+To build and run Docker container use the following command:
 
 ```
 
-
-
-```
-
-To run Docker container use the following command:
-
-```
-
+docker-compose down                                     
+docker-compose up --build
 
 ```

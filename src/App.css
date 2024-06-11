@@ -13,7 +13,7 @@ body {
   padding: 20px;
   min-height: 100vh;
   text-align: center;
-  margin-top: 0px; /* Adjust this value to move the card upwards */
+  margin-top: 0px;
 }
 
 .main-card {
@@ -24,14 +24,14 @@ body {
   width: 100%;
   max-width: 600px;
   margin-bottom: 20px;
-  text-align: left; /* Ensure text is left-aligned */
+  text-align: left;
 }
 
 .logo {
   display: block;
-  margin: 0 auto 20px; /* Center the logo and add bottom margin */
-  max-width: 100%; /* Ensure the logo fits within the card */
-  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto 20px;
+  max-width: 100%;
+  height: auto;
 }
 
 .left-align {
@@ -42,11 +42,11 @@ body {
   font-size: 16px;
   text-align: justify;
   margin-bottom: 20px;
-  font-weight: normal; /* Not bold */
+  font-weight: normal;
 }
 
 button {
-  background-color: #6a0dad; /* Purple color */
+  background-color: #6a0dad;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -56,7 +56,7 @@ button {
 }
 
 button:hover {
-  background-color: #5a00b8; /* Darker purple for hover */
+  background-color: #5a00b8;
 }
 
 .loader {
@@ -79,8 +79,8 @@ button:hover {
   border-radius: 8px;
   max-width: 600px;
   width: 100%;
-  max-height: 80vh; /* Ensures the modal is not too tall */
-  overflow-y: auto; /* Adds a scrollbar if the content is too tall */
+  max-height: 80vh;
+  overflow-y: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 

@@ -1,7 +1,7 @@
 .scan-results {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px; /* Adjust the gap between the grid items as needed */
+  gap: 16px;
 }
 
 .scan-result-card {
@@ -33,18 +33,18 @@ button {
   list-style-type: none;
   padding-left: 0;
   max-height: 150px;
-  overflow-y: auto; /* Adds a scrollbar if the list is too tall */
-  background-color: #333; /* Set a darker background color */
-  color: #fff; /* Ensure text color is white */
+  overflow-y: auto;
+  background-color: #333;
+  color: #fff;
 }
 
 .details-item li {
-  background: #444; /* Slightly lighter background for list items */
+  background: #444;
   margin: 2px 0;
   padding: 5px;
   border-radius: 4px;
-  font-size: 14px; /* Smaller font size */
-  font-weight: normal; /* Not bold */
+  font-size: 14px;
+  font-weight: normal;
 }
 
 .loader {
