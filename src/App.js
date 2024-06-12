@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import ScanForm from "./components/ScanForm";
 import ScanResults from "./components/ScanResults";
-import { fetchScanIds, fetchScanById, initiateScan } from "./api/API";
+import { fetchAllScans, initiateScan } from "./api/API";
 import "./App.css";
 import logo from "./assets/logo.png";
 import { Image } from "react-bootstrap";
@@ -19,10 +19,7 @@ function App() {
   const fetchData = async () => {
     setFetchingResults(true);
     try {
-      const ids = await fetchScanIds();
-      const results = await Promise.all(
-        ids.map((data) => fetchScanById(data.id))
-      );
+      const results = await fetchAllScans();
       setScanResults(results);
     } catch (error) {
       console.error("Error fetching scan results:", error);

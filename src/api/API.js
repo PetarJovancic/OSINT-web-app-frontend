@@ -16,3 +16,8 @@ export const initiateScan = async (scanRequest) => {
   const response = await axios.post(`${backendUrl}/scan`, scanRequest);
   return response.data;
 };
+
+export const fetchAllScans = async () => {
+  const response = await axios.get(`${backendUrl}/scan`);
+  return response.data;
+};
